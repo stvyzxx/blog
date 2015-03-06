@@ -1,0 +1,30 @@
+#wrapper{
+	width:95%;	
+}
+
+#wrapper .header-slogan{
+	font: 2.5em Constantia, serif;
+}
+
+header{
+	height:220px;
+	
+}
+
+header nav  li a{
+	padding:0 10px;
+	font-size: .875em;
+}
+
+header .header-slogan{
+	margin:5px 0 15px;
+	height:39px;
+}
+
+h3 a{
+	font-size: .75em;
+}
+
+aside h2{
+	font-size: 1.1em;
+}

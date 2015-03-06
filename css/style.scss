@@ -1,2 +1,311 @@
 @charset "UTF-8";
 @import "reset.css";
+
+$font : Calibri, sans-serif;
+$font-color : #212121; 
+
+/*-------------- mixins ----------------*/
+@mixin border-radius($px){
+	-webkit-border-radius: $px;
+	-moz-border-radius: $px;
+	border-radius: $px;
+}
+
+/*------------- extends ------------*/
+
+.border-box, div, h1, h2, h3, h4, label, span, input, li, a{
+	box-sizing: border-box;
+}
+
+.style1{
+	border: 1px solid #e0e0e0;
+	background: #f5f5f5;
+	background: -webkit-linear-gradient(#fafafa, #f5f5f5); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#fafafa, #f5f5f5); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#fafafa, #f5f5f5); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#fafafa, #f5f5f5); /* Standard syntax */
+	@include border-radius(2px);
+}
+
+body{
+	font-family: $font;
+	font-size: 1em;
+}
+
+a{
+	text-decoration:none;
+	border:none;
+}
+
+a:visited{
+	
+}
+
+#wrapper{
+	width:66.666666%;
+	margin:0 auto;
+	max-width:1024px;
+	min-width:320px;
+	@extend .border-box;
+}
+
+aside{
+	width:30.3125%;  /* 291/960 */
+	float:right;
+	@extend .border-box;	
+	@extend .style1;
+}
+
+footer{
+	clear:both;
+	@extend .border-box;
+}
+
+/* ---------------- header -------------------*/
+
+header{
+	padding:15px 0 0;
+	height: 250px;
+	color: $font-color;
+	position:relative;
+	margin-bottom:20px;
+	address{
+		display: inline-block;
+		font-size:0.75em;
+	}
+	
+	.call{
+		display: inline-block;
+		margin-left:1%;
+		color: #ffa302;
+		border-bottom: 1px dashed #ffa302;
+	}
+	
+	.header-slogan{
+		height:79px;
+		text-align: center;
+		color:#424242;
+		font: 4em Constantia, serif;
+		margin-top:-10px;
+	}
+	
+	.header-search{
+		float:right;
+		border-bottom:1px solid $font-color;
+		width:150px;
+		
+		img{
+			position:relative;
+			top:1px;
+		}
+		
+		.searchInp{
+			width:130px;
+			padding:5px 10px;
+			color:#757575;
+			font-size:.875em;
+			height:2em;
+			border:none;
+		}
+	}
+	
+	nav{
+		margin-top: 45px;
+		li{
+			float:left;			
+			a{
+				display:block;
+				padding:0 40px;
+				height: 30px;
+				line-height:30px;
+				color:$font-color;
+				
+				font-size:1em;
+			}
+			
+			&:nth-child(2){
+				border-left: 1px solid $font-color;
+				border-right: 1px solid $font-color;
+			}
+		}
+		
+
+	}
+	
+	.section-tags{
+		position:absolute;
+		bottom: 0;
+		height:55px;
+		width:100%;
+		background-color: $font-color;
+		border-bottom:5px solid #757575;
+	}
+}
+
+/* ------------------- section -------------------*/
+
+section{
+	width: 67.60416%; /* 649/960 */
+	float:left;
+	margin-bottom:20px;
+	@extend .border-box;
+	
+	.nextPosts{
+		position:relative;
+		left:50%;
+		margin-left:-8px;
+	}
+}
+
+article{
+	margin: 0 0 30px;
+	text-align: justify;
+	color: #424242;
+	@extend .border-box;
+	@extend .style1;
+	
+	.section-article-header{
+		height:49px;
+		padding:3px 2.61941% 0;
+		border-bottom: 2px solid #e0e0e0;
+		background: #f5f5f5;
+		background: -webkit-linear-gradient(#fafafa, #f5f5f5); /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient(#fafafa, #f5f5f5); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(#fafafa, #f5f5f5); /* For Firefox 3.6 to 15 */
+		background: linear-gradient(#fafafa, #f5f5f5); /* Standard syntax */
+		
+		h3{
+			font-size:1.5em;
+			
+			a{
+				color:$font-color;
+			}	
+		}
+
+		.section-article-header-date{
+			padding-top: 5px;
+			font-size: .75em;
+			color:#757575;
+		}	
+	}
+	
+	p{
+		padding:17px 2.61941% 0;
+		font-size: .875em;
+		line-height:1.2em;
+	}
+	
+	.details{
+		display: block;
+		margin: 15px 0 20px 2.61941%;
+		color:$font-color;
+		font-size: 1em;
+		text-decoration: underline;
+	}
+	
+}
+
+/*------------ aside --------------*/
+
+aside{
+	h2{
+		height:49px;
+		text-align:center;
+		border-bottom: 2px solid #e0e0e0;
+		font-size:1.5em;
+		line-height:47px;
+		color:$font-color;
+		background: #f5f5f5;
+		background: -webkit-linear-gradient(#fafafa, #f5f5f5); /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient(#fafafa, #f5f5f5); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(#fafafa, #f5f5f5); /* For Firefox 3.6 to 15 */
+		background: linear-gradient(#fafafa, #f5f5f5); /* Standard syntax */	
+	}
+	
+	ul{
+		padding:17px 4.81099% 17px;
+		li{
+			min-height:40px;
+			display: block;
+			padding:5px 0;
+			a{	
+				display: inline-block;
+				vertical-align: middle;
+				padding-left:5px;
+				font-size:.875em;
+				color: $font-color;
+			}
+			
+			&:before { /* для IE8+ */
+			  content: "";
+			  display: inline-block;
+			  height: 100%;
+			  vertical-align: middle;
+			}			
+		}
+		
+		li:not(:last-child){			
+			border-bottom: 1px solid #e0e0e0;		
+		}
+	}
+}
+
+/*------------------- footer --------------------*/
+
+footer{
+	height:200px;
+	background:$font-color;
+	
+	ul{
+		float: left;
+		margin: 10px 2.29166% 0;
+		li{
+		
+			a{
+				color: #fafafa;
+				font-size: .875em;
+				line-height:1.5em;
+			}
+		}
+	}
+}
+
+.footer-tags{
+	height:55px;
+	background: $font-color;
+	border-top:5px solid #757575;
+}
+
+.footer-divide{
+	border-top: 1px solid #757575;
+	border-bottom: 1px solid #bdbdbd;
+	margin: 0 2.29166%;
+}
+
+.footer-contacts{
+	float: right;
+	margin: 10px 2.29166% 0;
+	text-align: right;
+	address{
+		color: #fafafa;
+		font-size: .75em;
+		line-height:1.5em;
+	}
+}
+.copyright{
+	display:block;
+	clear:right;
+	margin-top:120px;
+	text-align:center;
+	color: #fafafa;
+	font-size: .75em;
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,11 @@
+#wrapper{
+	width:90%;	
+}
+
+#wrapper .header-slogan{
+	font: 3em Constantia, serif;
+}
+
+nav a{
+	padding:0 20px;
+}

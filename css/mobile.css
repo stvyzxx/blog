@@ -1,0 +1,76 @@
+#wrapper{
+	width:96%;	
+}
+
+/*-------- header --------*/
+
+#wrapper .header-slogan{
+	font: 2em Constantia, serif;
+}
+
+header{
+	height:250px;	
+}
+
+header address{
+	font-size: .7em;	
+}
+
+header nav  li a{
+	padding:0 10px;
+	font-size: .875em;
+}
+
+header .header-slogan{
+	margin:5px 0 15px;
+	height:39px;
+}
+
+header .header-search{
+	float:none;
+}
+
+/*-------- section --------*/
+section{
+	width:100%;
+}
+
+h3 a{
+	font-size: .75em;
+}
+
+/*-------- aside --------*/
+
+aside{
+	width:100%;
+	float:none;
+	clear:left;
+	margin-bottom:10px;
+}
+
+aside h2{
+	font-size: 1.1em;
+}
+
+
+/*-------- footer --------*/
+footer{
+	height:120px;
+	border-top:5px solid #757575;
+}
+
+footer .footer-tags{
+	display: none;
+}
+
+footer .footer-divide{
+	display: none;
+}
+
+footer .copyright{
+	margin-top:90px;
+}
+
+footer ul li a{
+	font-size: .75em;
+}
