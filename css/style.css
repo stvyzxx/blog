@@ -2,7 +2,7 @@
 @import url(reset.css);
 /*-------------- mixins ----------------*/
 /*------------- extends ------------*/
-.border-box, #wrapper, aside, footer, section, article, div, h1, h2, h3, h4, label, span, input, li, a {
+.border-box, #wrapper, aside, footer, section, article, div, h1, h2, h3, h4, label, span, input, li, a, header, section, article, footer, aside {
   box-sizing: border-box; }
 
 .style1, aside, article {
@@ -104,11 +104,13 @@ section {
   width: 67.60416%;
   /* 649/960 */
   float: left;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  position: relative; }
   section .nextPosts {
     position: relative;
     left: 50%;
-    margin-left: -8px; }
+    margin-left: -16px;
+    width: 32px; }
 
 article {
   margin: 0 0 30px;

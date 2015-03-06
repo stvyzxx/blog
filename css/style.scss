@@ -13,7 +13,7 @@ $font-color : #212121;
 
 /*------------- extends ------------*/
 
-.border-box, div, h1, h2, h3, h4, label, span, input, li, a{
+.border-box, div, h1, h2, h3, h4, label, span, input, li, a, header, section, article, footer, aside{
 	box-sizing: border-box;
 }
 
@@ -148,12 +148,14 @@ section{
 	width: 67.60416%; /* 649/960 */
 	float:left;
 	margin-bottom:20px;
+	position:relative;
 	@extend .border-box;
 	
 	.nextPosts{
 		position:relative;
 		left:50%;
-		margin-left:-8px;
+		margin-left:-16px;
+		width:32px;
 	}
 }
 
