@@ -10,11 +10,13 @@
 }
 
 header{
-	height:250px;	
+	height:300px;	
 }
 
 header address{
-	font-size: .7em;	
+	font-size: 1em;
+	text-align:center;
+	margin:0;
 }
 
 header nav  li a{
@@ -29,6 +31,26 @@ header .header-slogan{
 
 header .header-search{
 	float:none;
+}
+
+header nav{
+	margin:0;
+}
+
+header nav li{
+	float:none;
+	text-align:center;
+	border-bottom:1px solid #212121;
+}
+
+header nav li:nth-child(2){
+	border-left:none;
+	border-right:none;
+}
+
+header nav li a{
+	padding:0;
+	font-size:1.5em;
 }
 
 /*-------- section --------*/
