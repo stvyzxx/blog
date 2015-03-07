@@ -72,6 +72,10 @@ header{
 	address{
 		display: inline-block;
 		font-size:0.75em;
+		
+		br{
+			display:none;
+		}
 	}
 	
 	.call{

@@ -10,12 +10,17 @@
 }
 
 header{
-	height:350px;	
+	height:370px;	
 	text-align:center;
 }
 
 header address{
 	font-size: 1em;
+	text-align:right;
+}
+
+header address br{
+	display:inline-block;
 }
 
 header .call{
@@ -40,8 +45,9 @@ header nav  li a{
 
 header .header-search{
 	float:none;
-	margin:45px auto 15px;
+	margin:45px auto 25px;
 	width:100%;
+	border-color: #e0e0e0;
 }
 
 header .header-search .searchInp{

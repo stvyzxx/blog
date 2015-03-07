@@ -52,6 +52,8 @@ header {
   header address {
     display: inline-block;
     font-size: 0.75em; }
+    header address br {
+      display: none; }
   header .call {
     display: inline-block;
     margin-left: 1%;
