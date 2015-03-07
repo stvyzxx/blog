@@ -161,7 +161,6 @@ section{
 
 article{
 	margin: 0 0 30px;
-	text-align: justify;
 	color: #424242;
 	@extend .border-box;
 	@extend .style1;
@@ -192,6 +191,7 @@ article{
 	}
 	
 	p{
+		text-align: justify;
 		padding:17px 2.61941% 0;
 		font-size: .875em;
 		line-height:1.2em;
