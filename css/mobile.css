@@ -10,13 +10,12 @@
 }
 
 header{
-	height:300px;	
+	height:290px;	
+	text-align:center;
 }
 
 header address{
 	font-size: 1em;
-	text-align:center;
-	margin:0;
 }
 
 header nav  li a{
@@ -24,13 +23,21 @@ header nav  li a{
 	font-size: .875em;
 }
 
-header .header-slogan{
+#wrapper .header-slogan{
 	margin:5px 0 15px;
-	height:39px;
+	height:49px;
+	font-weight:600;
 }
 
 header .header-search{
 	float:none;
+	margin:45px auto 0;
+	width:100%;
+}
+
+header .header-search .searchInp{
+	width:70%;
+	font-size:1.5em;
 }
 
 header nav{
@@ -53,6 +60,10 @@ header nav li a{
 	font-size:1.5em;
 }
 
+header .section-tags{
+	display: none;
+}
+
 /*-------- section --------*/
 section{
 	width:100%;
@@ -60,6 +71,10 @@ section{
 
 h3 a{
 	font-size: .75em;
+}
+
+article{
+	margin:0 0 10px;
 }
 
 /*-------- aside --------*/

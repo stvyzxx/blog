@@ -104,7 +104,7 @@ section {
   width: 67.60416%;
   /* 649/960 */
   float: left;
-  margin-bottom: 20px;
+  margin: 0 0 20px;
   position: relative; }
   section .nextPosts {
     position: relative;
