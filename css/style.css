@@ -117,7 +117,7 @@ article {
   text-align: justify;
   color: #424242; }
   article .section-article-header {
-    height: 49px;
+    min-height: 49px;
     padding: 3px 2.61941% 0;
     border-bottom: 2px solid #e0e0e0;
     background: #f5f5f5;
@@ -134,7 +134,7 @@ article {
       article .section-article-header h3 a {
         color: #212121; }
     article .section-article-header .section-article-header-date {
-      padding-top: 5px;
+      padding: 5px 0 5px;
       font-size: .75em;
       color: #757575; }
   article p {

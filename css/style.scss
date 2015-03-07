@@ -167,7 +167,7 @@ article{
 	@extend .style1;
 	
 	.section-article-header{
-		height:49px;
+		min-height:49px;
 		padding:3px 2.61941% 0;
 		border-bottom: 2px solid #e0e0e0;
 		background: #f5f5f5;
@@ -185,7 +185,7 @@ article{
 		}
 
 		.section-article-header-date{
-			padding-top: 5px;
+			padding: 5px 0 5px;
 			font-size: .75em;
 			color:#757575;
 		}	
