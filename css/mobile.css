@@ -32,6 +32,9 @@ header .call{
 	margin-left:-85px;
 
 }
+header{
+	margin-bottom:50px !important;
+}
 
 header nav  li a{
 	padding:0 10px;
@@ -109,6 +112,11 @@ article{
 
 article p{
 	font-size: 1em;
+}
+
+article .details{
+	font-size:1em;
+	color:#ffa302;
 }
 
 /*-------- aside --------*/
