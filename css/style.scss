@@ -98,6 +98,7 @@ header{
 		margin-left:1%;
 		color: #ffa302;
 		border-bottom: 1px dashed #ffa302;
+		font-size:1.2em;
 		@extend .hover-style;
 		&:hover{
 			color:#424242;
@@ -339,11 +340,11 @@ article{
 
 aside{
 	h2{
-		height:49px;
+		height:51px;
 		text-align:center;
 		border-bottom: 2px solid #e0e0e0;
 		font-size:1.5em;
-		line-height:47px;
+		line-height:49px;
 		color:$font-color;
 		background: #f5f5f5;
 		background: -webkit-linear-gradient(#fafafa, #f5f5f5); /* For Safari 5.1 to 6.0 */
@@ -385,7 +386,7 @@ aside{
 
 footer{
 	height:150px;
-	
+	margin:0;
 	
 	ul{
 		float: left;
@@ -458,6 +459,30 @@ footer{
 
 
 
+/*------------- Modernizr --------------*/
+.no-flexbox .fixedMenu{
+	ul{
+		display:block;
+		
+		li{
+			float:left;
+			width:25%;
+		}
+	}	
+}
+
+.no-rgba #navigation{
+	ul{
+		li{
+			border-right: 1px solid #212121;
+		}
+		
+		.last{
+			border:none;
+		}
+		
+	}
+}
 
 
 
