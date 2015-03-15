@@ -1,5 +1,5 @@
 #wrapper{
-	width:96%;	
+	width:98%;	
 }
 
 /*-------- header --------*/
@@ -25,10 +25,11 @@ header address br{
 
 header .call{
 	position: absolute;
-	width:110px;
+	width:170px;
+	font-size: 1.5em;
 	top:80px;
 	left:50%;
-	margin-left:-55px;
+	margin-left:-85px;
 
 }
 
@@ -56,16 +57,25 @@ header .header-search .searchInp{
 }
 
 header nav{
-	margin:0;
+	margin:0 auto;
+}
+
+header nav ul{
+	display:block;
+	width:100%;
+	margin:0 auto;
 }
 
 header nav li{
 	float:none;
+	display:block;
+	width:90%;
+	margin:0 auto;
 	text-align:center;
-	border-bottom:2px solid #212121;
+	border-bottom:1px solid #212121;
 }
 
-header nav li:nth-child(2){
+header #navigation li:nth-child(2){
 	border-left:none;
 	border-right:none;
 }
@@ -75,9 +85,14 @@ header nav li a{
 	font-size:1.5em;
 }
 
-header .section-tags{
+header nav li a:hover{
+	text-decoration:none;
+}
+
+.tags-block{
 	display: none;
 }
+
 
 /*-------- section --------*/
 section{
@@ -112,12 +127,11 @@ aside h2{
 
 /*-------- footer --------*/
 footer{
-	height:120px;
-	border-top:5px solid #757575;
+	height:160px;
 }
 
-footer .footer-tags{
-	display: none;
+.footer-content-wrapper{
+	height:160px;
 }
 
 footer .footer-divide{
@@ -125,9 +139,9 @@ footer .footer-divide{
 }
 
 footer .copyright{
-	margin-top:90px;
+	
 }
 
 footer ul li a{
-	font-size: .75em;
+	font-size: 1em;
 }

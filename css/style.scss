@@ -24,8 +24,23 @@ $font-color : #212121;
 	background: -o-linear-gradient(#fafafa, #f5f5f5); /* For Opera 11.1 to 12.0 */
 	background: -moz-linear-gradient(#fafafa, #f5f5f5); /* For Firefox 3.6 to 15 */
 	background: linear-gradient(#fafafa, #f5f5f5); /* Standard syntax */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#f5f5f5',GradientType=0 ); /* IE6-9 */
 	@include border-radius(2px);
 }
+
+.hover-style{
+	color:black;
+	-webkit-transition: all linear .3s;
+	-moz-transition: all linear .3s;
+	-ms-transition: all linear .3s;
+	-o-transition: all linear .3s;
+	transition: all linear .3s;
+	&:hover{
+		color:#ffa302;
+		text-decoration: underline;
+	}	
+}
+
 
 body{
 	font-family: $font;
@@ -65,7 +80,7 @@ footer{
 
 header{
 	padding:15px 0 0;
-	height: 250px;
+	height: 305px;
 	color: $font-color;
 	position:relative;
 	margin-bottom:20px;
@@ -83,6 +98,12 @@ header{
 		margin-left:1%;
 		color: #ffa302;
 		border-bottom: 1px dashed #ffa302;
+		@extend .hover-style;
+		&:hover{
+			color:#424242;
+			text-decoration:none;
+			border-bottom: 1px dashed #424242;
+		}
 	}
 	
 	.header-slogan{
@@ -90,7 +111,6 @@ header{
 		text-align: center;
 		color:#424242;
 		font: 4em Constantia, serif;
-		margin-top:-10px;
 	}
 	
 	.header-search{
@@ -110,6 +130,10 @@ header{
 			font-size:.875em;
 			height:2em;
 			border:none;
+			
+			&:focus{
+				outline:none;
+			}
 		}
 	}
 	
@@ -122,9 +146,10 @@ header{
 				padding:0 40px;
 				height: 30px;
 				line-height:30px;
-				color:$font-color;
-				
+				color:$font-color;			
 				font-size:1em;
+
+				@extend .hover-style;
 			}
 			
 			&:nth-child(2){
@@ -136,13 +161,106 @@ header{
 
 	}
 	
-	.section-tags{
-		position:absolute;
-		bottom: 0;
-		height:55px;
+	.tags-block{
+		margin-top:80px;
+		height:85px;
 		width:100%;
-		background-color: $font-color;
-		border-bottom:5px solid #757575;
+		.centerfix{
+			padding:0 10px;
+			margin:5px 0;
+			
+			.tags-wrapper{
+				background: $font-color;
+				height:65px;
+			}
+		}
+		.tags-top-line, .tags-bottom-line{
+			height:10px;
+			background-color: $font-color;
+			position:relative;
+		}
+		
+		.tags-top-line::before,.tags-top-line::after, .tags-bottom-line::before, .tags-bottom-line::after{
+			content:"";
+			position:absolute;
+			top:0;
+			width:0;
+		}
+		
+		.tags-top-line::before{
+			left:-10px;
+			border-bottom:10px solid #fff;
+			border-left:10px solid transparent;
+			border-right:10px solid transparent;
+		}
+		
+		.tags-top-line::after{
+			right:-10px;
+			border-bottom:10px solid #fff;
+			border-left:10px solid transparent;
+			border-right:10px solid transparent;
+		}
+		
+		.tags-bottom-line::before{
+			left:-10px;
+			border-top:10px solid #fff;
+			border-left:10px solid transparent;
+			border-right:10px solid transparent;
+		}
+		
+		.tags-bottom-line::after{
+			right:-10px;
+			border-top:10px solid #fff;
+			border-left:10px solid transparent;
+			border-right:10px solid transparent;
+		}
+		
+	}
+}
+
+.fixedMenu{
+	background:rgba(0,0,0,.7);
+	height:30px;
+	opacity:0;
+	position:fixed;
+	top:0;
+	width:100%;
+	z-index:999;
+	ul{
+		width:66.666666%;
+		margin:0 auto;
+		display:flex;
+		
+		li{
+			flex:1;
+			a{
+				display:block;
+				padding:0;
+				height: 30px;
+				line-height:30px;
+				color:#fafafa;	
+				font-size:1em;
+				text-align:center;
+				@extend .hover-style;
+			}
+			
+			&:nth-child(2){
+				border-left: 1px solid #fafafa;	
+				border-right: 1px solid #fafafa;	
+			}
+			
+			&:last-child{
+				border-left: 1px solid #fafafa;	
+				a{
+				color: #ffa302 !important;
+				&:hover{
+					color:#fafafa !important;
+				}
+			
+			}
+			}
+			
+		}
 	}
 }
 
@@ -178,12 +296,17 @@ article{
 		background: -o-linear-gradient(#fafafa, #f5f5f5); /* For Opera 11.1 to 12.0 */
 		background: -moz-linear-gradient(#fafafa, #f5f5f5); /* For Firefox 3.6 to 15 */
 		background: linear-gradient(#fafafa, #f5f5f5); /* Standard syntax */
-		
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#f5f5f5',GradientType=0 ); /* IE6-9 */
+
 		h3{
 			font-size:1.5em;
 			
 			a{
 				color:$font-color;
+				@extend .hover-style;
+				&:hover{
+					text-decoration:none;
+				}
 			}	
 		}
 
@@ -207,6 +330,7 @@ article{
 		color:$font-color;
 		font-size: 1em;
 		text-decoration: underline;
+		@extend .hover-style;
 	}
 	
 }
@@ -240,6 +364,7 @@ aside{
 				padding-left:5px;
 				font-size:.875em;
 				color: $font-color;
+				@extend .hover-style;
 			}
 			
 			&:before { /* для IE8+ */
@@ -259,8 +384,8 @@ aside{
 /*------------------- footer --------------------*/
 
 footer{
-	height:200px;
-	background:$font-color;
+	height:150px;
+	
 	
 	ul{
 		float: left;
@@ -271,21 +396,43 @@ footer{
 				color: #fafafa;
 				font-size: .875em;
 				line-height:1.5em;
+				@extend .hover-style;
 			}
 		}
 	}
 }
 
-.footer-tags{
-	height:55px;
+.footer-head{
+	height:10px;
+	position:relative;
 	background: $font-color;
-	border-top:5px solid #757575;
+	margin-bottom:1px;
 }
 
-.footer-divide{
-	border-top: 1px solid #757575;
-	border-bottom: 1px solid #bdbdbd;
-	margin: 0 2.29166%;
+.footer-head::before,.footer-head::after{
+	content:"";
+	position:absolute;
+	width:0;
+	top:0;
+}
+
+.footer-head::before{
+	left:-10px;
+	border-top:10px solid #fff;
+	border-left:10px solid transparent;
+	border-right:10px solid transparent;
+}
+
+.footer-head::after{
+	right:-10px;
+	border-top:10px solid #fff;
+	border-left:10px solid transparent;
+	border-right:10px solid transparent;
+}
+
+.footer-content-wrapper{
+	background:$font-color;
+	height:100%;
 }
 
 .footer-contacts{
@@ -298,10 +445,11 @@ footer{
 		line-height:1.5em;
 	}
 }
+
 .copyright{
 	display:block;
-	clear:right;
-	margin-top:120px;
+	clear:both;
+	padding-top:50px;
 	text-align:center;
 	color: #fafafa;
 	font-size: .75em;

@@ -9,14 +9,15 @@
   <meta name="keywords" content="HTML,CSS,XML,JavaScript">
   <meta name="author" content="Hege Refsnes">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/medium.css" media="screen and (max-width: 1100px)">
   <link rel="stylesheet" type="text/css" href="css/small.css" media="screen and (max-width: 840px)">
   <link rel="stylesheet" type="text/css" href="css/mobile.css" media="screen and (max-width: 550px)">
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="js/jquery-1.11.2.min.js"></script>
+	<script src="js/modernizr.js"></script>
   <!--[if lt IE 9]>
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <script src="js/html5shiv.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
 </head>
 
@@ -32,23 +33,35 @@
 			<h1  class="header-slogan">Юридична консультація</h1>
 			<div class="header-search">
 				<img src="images/search.png" alt="search icon">
-				<input type="text" class="searchInp" placeholder="Пошук">
+				<input type="text" class="searchInp" max="10" placeholder="Пошук">
 			</div>
 			
-			<nav>
+			<nav id="navigation">
 				<ul>
-					<li><a href="#">Головна</a></li>
+					<li><a href="#" >Головна</a></li>
 					<li><a href="#">Про нас</a></li>
 					<li><a href="#">Зворотній зв'язок</a></li>
 				</ul>
 			</nav>
-			<div class="section-tags"></div>
+
+			<div class="tags-block">
+				<div class="tags-top-line"></div>
+				<div class="centerfix">
+					<div class="tags-wrapper">
+						<!-- <pre>vsv bvfvdf bfdbf                  bgfb             ntfk              kjkj
+						gfdgdf                  tgfg          hthth             hth                               yuy
+								rtdfggt				grtgtkjk                               uyu
+						</pre> -->
+					</div>
+				</div>	
+				<div class="tags-bottom-line"></div>
+			</div>
 		</header>
 		<section>
 						
 			<article class="section-article">
 				<div class="section-article-header">
-					<h3><a href="#">Дубликат трудовой книжки</a></h3>
+					<h3><a href="#" >Дубликат трудовой книжки</a></h3>
 					<div class="section-article-header-date"><span>Опубліковано 28 листопада 2014</span></div>
 				</div>
 				<p>
@@ -133,20 +146,22 @@
 		
 		
 		<footer>
-			<div class="footer-tags"></div>
-			<div class="footer-divide"></div>
-			<ul>
-				<li><a href="#">Головна</a></li>
-				<li><a href="#">Про Сайт</a></li>
-				<li><a href="#">Зворотній зв'язок</a></li>
-			</ul>
+			<div class="footer-head"></div>			
+				<div class="footer-content-wrapper">
 			
-			<div class="footer-contacts">
-				<address>E-mail редакції: mail@ua</address>
-				<address>Телефони: (044) 537-02-22;<br>   (044) 537-02-22;</address>				
-			</div>
-			
-			<span class="copyright">Legal Advice 2015</span>
+					<ul>
+						<li><a href="#">Головна</a></li>
+						<li><a href="#">Про Сайт</a></li>
+						<li><a href="#">Зворотній зв'язок</a></li>
+					</ul>
+					
+					<div class="footer-contacts">
+						<address>E-mail редакції: mail@ua</address>
+						<address>Телефони: (044) 537-02-22;<br>   (044) 537-02-22;</address>				
+					</div>					
+					<span class="copyright" >Legal Advice 2015</span>
+					
+				</div>
 		</footer>
 	</div>
 	<script src="js/script.js"></script>

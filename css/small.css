@@ -18,13 +18,11 @@ header nav  li a{
 
 header .header-slogan{
 	margin:5px 0 15px;
-	height:39px;
+	height:79px;
 }
 
-h3 a{
-	font-size: .75em;
-}
 
-aside h2{
-	font-size: 1.1em;
+
+.fixedMenu{
+		display:none;
 }
